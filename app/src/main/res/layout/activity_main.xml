@@ -1,18 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.alchub.MainActivity">
 
-    <TextView
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/deddoh"
+        android:scaleType="centerCrop"
+        android:paddingRight="325dp"/>
+    <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
 
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/linearLayout">
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_to_andela_alc_join" />
+    <TextView
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:text="Or SIGN IN if you have an account."
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:textColor="#26C6DA"
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Username">
+
+    </Button>
+
+
+
+    <EditText
+        android:textColor="#26C6DA"
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:text="E-mail"/>
+
+
+
+    <EditText
+        android:textColor="#26C6DA"
+        android:id="@+id/namePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+
+
+
+    <CheckBox
+        android:textColor="#26C6DA"
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="I'm not a robot!" />
+
+
+        <Button
+            android:textColor="#311B92"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:onClick="open page"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
